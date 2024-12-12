@@ -1,0 +1,138 @@
+body {
+  background: linear-gradient(75deg, #586d7b, #31425a 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+.container {
+  background-color: #eee9e9;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 8px 2px rgba(20, 20, 20, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.5;
+}
+
+.title {
+  font-size: 30px;
+  margin-bottom: 1.5rem;
+}
+
+.stopwatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.timer {
+  font-size: 40px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  animation: pulse 3s infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    background-color: #ffffff;
+  }
+
+  to {
+    background-color: #c5c5c6;
+  }
+}
+
+.timer span:not(.sep) {
+  /* width: 110px; */
+  padding: 0.35rem 1.6rem;
+  display: inline-block;
+  text-align: center;
+  box-shadow: 0 0 6px 2px rgb(0, 0, 0, 0.7);
+}
+
+.sep {
+  color: rgb(128, 0, 19);
+}
+
+.raised {
+  display: inline-block;
+  background-color: cadetblue;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Button styling */
+button {
+  padding: 0.5rem 1.25rem;
+  font-size: 1rem;
+  background-color: #586d7b;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:not(.deleteBtn):hover {
+  background-color: #31425a;
+}
+
+.deleteBtn {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.8rem;
+  background-color: #586d7b;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.deleteBtn:hover {
+  background-color: #ef0c0c;
+}
+
+.lap-title {
+  font-size: 1.5rem;
+}
+
+.laps {
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow-y: auto;
+  max-height: 200px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  scrollbar-gutter: stable both-edges;
+}
+
+li {
+  padding: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+li span {
+  font-weight: 700;
+}
+
+.laptime {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
