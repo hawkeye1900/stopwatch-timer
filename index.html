@@ -7,26 +7,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1 class="title">Stopwatch Timer</h1>
-        <div class="stopwatch">
-            <div class="timer">
-                <span class="raised" id="mins">00</span><span  class="sep"> : </span>
-                <span class="raised" id="secs">00</span><span  class="sep"> : </span>
-                <span class="raised" id="ms">00</span>
-            </div>
-            <div class="controls">
-                <button id="startBtn">Start</button>
-                <button id="stopBtn">Stop</button>
-                <button id="pauseBtn">Pause</button>
-                <button id="resetBtn">Reset</button>
-            </div>
-            <div class="laps">
-                <h2 class="lap-title">No laps recorded</h2>
-                <ul id="lap-list"></ul>
+    <main class="main">
+        <div class="container">
+            <h1 class="title">Stopwatch Timer</h1>
+            <div class="stopwatch">
+                <div class="timer">
+                    <span class="raised" id="mins">00</span><span class="sep"> : </span>
+                    <span class="raised" id="secs">00</span><span class="sep"> : </span>
+                    <span class="raised" id="ms">00</span>
+                </div>
+                <div class="controls">
+                    <button id="startBtn">Start</button>
+                    <button id="stopBtn">Stop</button>
+                    <button id="pauseBtn">Pause</button>
+                    <button id="resetBtn">Reset</button>
+                </div>
             </div>
         </div>
-    </div>  
+        <div class="laps">
+            <h2 class="lap-title">No laps recorded</h2>
+            <ul id="lap-list"></ul>
+        </div>
+    </main>
+
     <script src="script.js"></script>
 </body>
 </html>

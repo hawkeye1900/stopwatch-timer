@@ -7,6 +7,11 @@ body {
   font-family: sans-serif;
 }
 
+.main {
+  display: flex;
+  gap: 20px;
+}
+
 .container {
   background-color: #eee9e9;
   border-radius: 12px;
@@ -88,14 +93,16 @@ button:not(.deleteBtn):hover {
 }
 
 .deleteBtn {
-  padding: 0.5rem 1.25rem;
+  padding: 0.3rem 0.8rem;
   font-size: 0.8rem;
   background-color: #586d7b;
-  transition: background-color 0.3s ease-in-out;
+  color: #000;
+  transition: all 0.3s ease-in-out;
 }
 
 .deleteBtn:hover {
   background-color: #ef0c0c;
+  color: #fff;
 }
 
 .lap-title {
@@ -103,7 +110,13 @@ button:not(.deleteBtn):hover {
 }
 
 .laps {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  /* background-color: #586d7b; */
+  background-color: #fff;
+  border-radius: 8px;
 }
 
 ul {
@@ -114,7 +127,7 @@ ul {
   max-height: 200px;
   background-color: #ffffff;
   border-radius: 8px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
   scrollbar-gutter: stable both-edges;
 }
 
@@ -134,5 +147,6 @@ li span {
 .laptime {
   display: flex;
   justify-content: space-between;
+  gap: 10px;
   align-items: center;
 }
